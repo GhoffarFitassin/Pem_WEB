@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 100px 0;
+    background-color: #eaeaea;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: red;
+    font-size: 14px;
+}
+
+.text-input1, .text-input2, .text-area {
+    width: 500px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.tgl{
+    margin-left: 200px;
+}
+
+.text-input1{
+    margin-left: 255px;
+}
+
+.text-input2{
+    margin-left: 210px;
+}
+
+.text-area {
+    margin-left: 250px;
+    height: 250px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+}
