@@ -16,7 +16,7 @@
             <textarea id="alamat" name="alamat" class="text-area"></textarea><br><br>
 
             <label for="tanggal-lahir">Tanggal Lahir</label>
-            <input type="text" id="tanggal-lahir" name="tanggal-lahir" class="text-input2"><br><br>
+            <input type="date" id="tanggal-lahir" name="tanggal-lahir" class="text-input2"><br><br>
 
             <label>Jenis Kelamin</label>
             <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki">
@@ -43,8 +43,24 @@
             <input type="checkbox" id="check" name="check">
             <label for="check">Check Jika anda akan mengirimkan data ini</label><br><br>
 
-            <button type="submit">Cek!</button>
+            <button type="submit" onclick="checkForm()">Cek!</button>
         </form>
     </div>
 </body>
+<script>
+    function checkForm() {
+        if (!document.getElementById('nama').value||
+            !document.getElementById('alamat').value||
+            !document.getElementById('tanggal-lahir').value||
+            !document.querySelector('input[name="jenis-kelamin"]:checked')||
+            document.querySelectorAll('input[name="hobby"]:checked').length == 0||
+            document.querySelectorAll('input[name="pekerjaan"]:checked').length == 0||
+            !document.getElementById('check').checked
+        ) {
+            alert('Semua kolom wajib diisi dan dipilih');
+        } else {
+            alert('Data Berhasil dikirim');
+        }
+    }
+</script>
 </html>
