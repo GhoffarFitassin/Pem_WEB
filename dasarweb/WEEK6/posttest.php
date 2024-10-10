@@ -8,7 +8,7 @@
     <script>
         $().ready(function () {
             $("#flip").click(function () {
-                $("#kotak").slideDown("slow");
+                $("#kotak").slideToggle("slow");
             });
         });
     </script>
